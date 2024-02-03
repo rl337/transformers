@@ -2059,6 +2059,7 @@ class PreTrainedTokenizerBase(SpecialTokensMixin, PushToHubMixin):
         local_files_only=False,
         _commit_hash=None,
         _is_local=False,
+        trust_remote_code=False,
         **kwargs,
     ):
         # We instantiate fast tokenizers based on a slow tokenizer if we don't have access to the tokenizer.json
@@ -2116,6 +2117,7 @@ class PreTrainedTokenizerBase(SpecialTokensMixin, PushToHubMixin):
                     token=token,
                     cache_dir=cache_dir,
                     local_files_only=local_files_only,
+                    trust_remote_code=trust_remote_code,
                     _commit_hash=_commit_hash,
                 )
                 config_tokenizer_class = config.tokenizer_class
