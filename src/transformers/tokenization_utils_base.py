@@ -1810,7 +1810,7 @@ class PreTrainedTokenizerBase(SpecialTokensMixin, PushToHubMixin):
         local_files_only: bool = False,
         token: Optional[Union[str, bool]] = None,
         revision: str = "main",
-        trust_remote_code = False,
+        trust_remote_code=False,
         **kwargs,
     ):
         r"""
